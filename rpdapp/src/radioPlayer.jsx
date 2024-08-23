@@ -45,17 +45,22 @@ const RadioPlayer = () => {
   `;
 
   useEffect(() => {
-    audioRef.current = new Audio('http://s1.voscast.com:8080/stream')
-    audioRef.current.addEventListener('play', () => setIsPlaying(true))
-    audioRef.current.addEventListener('pause', () => setIsPlaying(false))
-
+    console.log('Initializing audio element with URL:', 'http://s1.voscast.com:8080/stream');
+    audioRef.current = new Audio('http://s1.voscast.com:8080/stream');
+    audioRef.current.addEventListener('play', () => setIsPlaying(true));
+    audioRef.current.addEventListener('pause', () => setIsPlaying(false));
+  
+    audioRef.current.addEventListener('error', (e) => {
+      console.error('Audio element error:', e);
+    });
+  
     return () => {
       if (audioRef.current) {
-        audioRef.current.pause()
-        audioRef.current.src = ''
+        audioRef.current.pause();
+        audioRef.current.src = '';
       }
-    }
-  }, [])
+    };
+  }, []);
 
   useEffect(() => {
     const handleMessage = async (event) => {
