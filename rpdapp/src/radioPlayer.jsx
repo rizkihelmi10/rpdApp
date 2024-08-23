@@ -45,15 +45,17 @@ const RadioPlayer = () => {
   `;
 
   useEffect(() => {
-    console.log('Initializing audio element with URL:', 'http://s1.voscast.com:8080/stream');
+    // Initialize the audio object with the stream URL
     audioRef.current = new Audio('http://s1.voscast.com:8080/stream');
+    
+    // Ensure correct MIME type
+    audioRef.current.type = 'audio/mpeg';
+  
+    // Add event listeners for play and pause
     audioRef.current.addEventListener('play', () => setIsPlaying(true));
     audioRef.current.addEventListener('pause', () => setIsPlaying(false));
   
-    audioRef.current.addEventListener('error', (e) => {
-      console.error('Audio element error:', e);
-    });
-  
+    // Cleanup on component unmount
     return () => {
       if (audioRef.current) {
         audioRef.current.pause();
