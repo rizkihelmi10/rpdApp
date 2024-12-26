@@ -79,44 +79,40 @@ const RadioPlayer = () => {
       let imagePath = 'Radio-PPI-Dunia-Logo.png';
 
       switch (true) {
-        case data.includes('dunia kuliner'):
-          imagePath = 'dukunn.png';
+        case data.includes('buka mata'):
+          imagePath = 'buka_mata.png';
           break;
-        case data.includes('hallyu radio'):
-          imagePath = 'Hallyu-Radio-Poster.png';
+        case data.includes('chill out'):
+          imagePath = 'chill_out.png';
           break;
         case data.includes('diskografi'):
           imagePath = 'Diskografi-Dian-Web.png';
           break;
-        case data.includes('kutu buku'):
-          imagePath = 'kutubuku.jpg';
-          break;
-        case data.includes('sepak bola'):
-          imagePath = 'WhatsApp-Image-2024-02-09-at-22.37.00-2.jpeg';
+        case data.includes('melodi memori'):
+          imagePath = 'melodi_memori.jpg';
           break;
         case data.includes('seputar obrolan psikologi'):
-          imagePath = 'SOP-WEB-01.jpg';
+          imagePath = 'sop (1).png';
           break;
-        case data.includes('cozy afternoon'):
-          imagePath = 'IMG_5520.jpg';
+        case data.includes('sktchi'):
+          imagePath = 'sktchi.png';
           break;
         case data.includes('suka sama'):
-          imagePath = 'SukaSama-RPD-Web.png';
+          imagePath = 'suka_sama.png';
           break;
-        case data.includes('jalan jalan santai'):
-          imagePath = 'jjs.jpeg';
+        case data.includes('obsesif'):
+          imagePath = 'obsesif (1).png';
           break;
-        case data.includes('biografi'):
-          imagePath = 'WEBBIGFICS-01.jpeg';
+        case data.includes('hallyu radio'):
+          imagePath = 'hallyu (1).png';
           break;
-        case data.includes('bahasa jiwa'):
-          imagePath = 'bahasajiwa.jpeg';
-          break;
+        case data.includes('dunia kuliner'):
+          imagePath = 'dukun (1).png';
+          break;    
         default:
           imagePath = 'Radio-PPI-Dunia-Logo.png';
           break;
       }
-
       const storageRef = ref(storage, `images/${imagePath}`);
       try {
         const url = await getDownloadURL(storageRef);
