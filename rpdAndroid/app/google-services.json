@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "161921837157",
+    "project_id": "rpdmobile-9bf04",
+    "storage_bucket": "rpdmobile-9bf04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161921837157:android:088aa5bf66d007d0367e8c",
+        "android_client_info": {
+          "package_name": "com.rpd.rpdandroid"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxG2oIbaYE_1jH4NafRjSjIIdWgv4gq84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
