@@ -89,7 +89,7 @@ const RadioPlayer = () => {
           imagePath = 'Diskografi-Dian-Web.png';
           break;
         case data.includes('melodi memori'):
-          imagePath = 'melodi_memori.jpg';
+          imagePath = 'melodi_memori.png';
           break;
         case data.includes('seputar obrolan psikologi'):
           imagePath = 'sop (1).png';
