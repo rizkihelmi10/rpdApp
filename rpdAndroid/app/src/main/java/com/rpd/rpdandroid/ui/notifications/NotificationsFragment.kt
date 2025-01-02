@@ -14,8 +14,6 @@ import android.webkit.WebResourceRequest
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.rpd.rpdandroid.databinding.FragmentNotificationsBinding
@@ -87,7 +85,6 @@ class NotificationsFragment : Fragment() {
             ) {
                 val errorMessage = "Error loading ${request?.url}: ${error?.description}"
                 Log.e(TAG, errorMessage)
-                Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_LONG).show()
             }
 
             override fun shouldOverrideUrlLoading(

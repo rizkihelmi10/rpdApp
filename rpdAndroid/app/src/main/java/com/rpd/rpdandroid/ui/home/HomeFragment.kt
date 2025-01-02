@@ -11,7 +11,6 @@ import android.webkit.WebResourceRequest
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.rpd.rpdandroid.databinding.FragmentHomeBinding
 
@@ -66,7 +65,6 @@ class HomeFragment : Fragment() {
                 super.onReceivedError(view, request, error)
                 // Handle error and display a toast message
                 val errorMessage = "Error: ${error?.description}"
-                Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_LONG).show()
             }
         }
 

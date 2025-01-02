@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
-import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -87,7 +86,6 @@ class MainActivity : AppCompatActivity() {
             }
             val token = task.result
             Log.d("FCM", "FCM Token: $token")
-            Toast.makeText(this, "FCM Token: $token", Toast.LENGTH_SHORT).show()
         }
     }
 }
